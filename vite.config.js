@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/Search2/',
   plugins: [react()],
+  resolve: {
+    alias: {
+      crypto: 'crypto-browserify'
+    }
+  }
 })

@@ -12,6 +12,7 @@
   },
   "homepage": "https://fake-satan.github.io/Search2/",
   "dependencies": {
+    "crypto-browserify": "^3.12.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
