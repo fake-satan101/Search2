@@ -1,82 +1,92 @@
 import React, { useState } from "react";
-
+import god from "./assets/imgs/god.jpg";
+import ave from "./assets/imgs/ave.webp";
+import fo from "./assets/imgs/for.jpg";
+import dar from "./assets/imgs/dar.jpg";
+import inc from "./assets/imgs/inc.jpg";
+import int from "./assets/imgs/int.jpg";
+import lal from "./assets/imgs/lal.jpg";
+import mat from "./assets/imgs/mat.webp";
+import pul from "./assets/imgs/pul.jpg";
+import sha from "./assets/imgs/sha.jpg";
+import tit from "./assets/imgs/tit.webp";
 const sampleData = [
   {
     id: 1,
     title: "Inception: A Journey into Dreams",
     genres: ["Sci-Fi", "Action"],
     topic: "Mind-Bending",
-    img: "src/assets/imgs/inc.jpg",
+    img: inc,
   },
   {
     id: 2,
     title: "The Godfather: A Mafia Legacy",
     genres: ["Crime", "Drama"],
     topic: "Mafia",
-    img: "src/assets/imgs/god.jpg",
+    img: god,
   },
   {
     id: 3,
     title: "The Dark Knight: Gotham's Savior",
     genres: ["Action", "Drama", "Crime"],
     topic: "Superheroes",
-    img: "src/assets/imgs/dar.jpg",
+    img: dar,
   },
   {
     id: 4,
     title: "Forrest Gump: A Life of Wonders",
     genres: ["Drama"],
     topic: "Life Lessons",
-    img: "src/assets/imgs/for.jpg",
+    img: fo,
   },
   {
     id: 5,
     title: "The Matrix: Enter the Digital World",
     genres: ["Sci-Fi", "Action"],
     topic: "Technology",
-    img: "src/assets/imgs/mat.webp",
+    img: mat,
   },
   {
     id: 6,
     title: "Titanic: A Tale of Love and Loss",
     genres: ["Romance", "Drama"],
     topic: "Tragedy",
-    img: "src/assets/imgs/tit.webp",
+    img: tit,
   },
   {
     id: 7,
     title: "Avengers: Endgame: The Final Showdown",
     genres: ["Action", "Sci-Fi", "Thriller"],
     topic: "Superheroes",
-    img: "src/assets/imgs/ave.webp",
+    img: ave,
   },
   {
     id: 8,
     title: "La La Land: A Musical Romance",
     genres: ["Musical", "Romance", "Drama"],
     topic: "Love Story",
-    img: "src/assets/imgs/lal.jpg",
+    img: lal,
   },
   {
     id: 9,
     title: "Interstellar: Beyond the Stars",
     genres: ["Sci-Fi", "Drama"],
     topic: "Space Exploration",
-    img: "src/assets/imgs/int.jpg",
+    img: int,
   },
   {
     id: 10,
     title: "Pulp Fiction: A Nonlinear Tale",
     genres: ["Crime", "Dark Comedy", "Thriller"],
     topic: "Dark Comedy",
-    img: "src/assets/imgs/pul.jpg",
+    img: pul,
   },
   {
     id: 11,
     title: "Shawshank Redemption: A Story of Hope and Resilience",
     genres: ["Crime", "Action", "Drama", "Thriller"],
     topic: "Tragedy",
-    img: "src/assets/imgs/sha.jpg",
+    img: sha,
   },
 ];
 
@@ -157,6 +167,7 @@ const Search = () => {
           onClick={() => setFilterOpen(!filterOpen)}
           style={{
             padding: "10px 20px",
+            color: "white",
             borderRadius: "5px",
             border: "1px solid #ccc",
             cursor: "pointer",
@@ -173,7 +184,7 @@ const Search = () => {
               position: "absolute",
               top: "50px",
               left: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.4)",
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
               
               border: "1px solid #ccc",
               borderRadius: "8px",
