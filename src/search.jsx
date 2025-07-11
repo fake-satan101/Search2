@@ -147,7 +147,7 @@ const Search = () => {
 
   return (
     <div style={{ padding: "20px", width: "1000px", margin: "0 auto" }}>
-      <h1>Movie Search</h1>
+      <h1 align="center">Movie Search</h1>
       <input
         type="text"
         placeholder="Search by title..."
@@ -165,11 +165,13 @@ const Search = () => {
       <div style={{ position: "relative", marginBottom: "20px", display: "flex", justifyContent: "flex-start" }}>
         <button
           onClick={() => setFilterOpen(!filterOpen)}
+          onMouseOver={(e) => (e.currentTarget.style.border = "white solid 1px")}
+          onMouseOut={(e) => (e.currentTarget.style.border = "grey solid 1px")}
           style={{
             padding: "10px 20px",
             color: "white",
             borderRadius: "5px",
-            border: "1px solid #ccc",
+            border: "1px solid grey",
             cursor: "pointer",
             backgroundColor: "black",
 
@@ -200,7 +202,10 @@ const Search = () => {
               {genres.map((g) => (
                 <label
                   key={g}
+                  onMouseOver={(e) => (e.currentTarget.style.color = "white")}
+                  onMouseOut={(e) => (e.currentTarget.style.color = "grey")}
                   style={{
+                    color: "grey",
                     opacity: 1,
                     display: "flex",
                     alignItems: "center",
@@ -226,8 +231,11 @@ const Search = () => {
               <h4 style={{ marginBottom: "10px" }}>Topics</h4>
               {topics.map((t) => (
                 <label
+                  onMouseOver={(e) => (e.currentTarget.style.color = "white")}
+                  onMouseOut={(e) => (e.currentTarget.style.color = "grey")}
                   key={t}
                   style={{
+                    color: "grey",
                     opacity: 1,
                     display: "flex",
                     alignItems: "center",
