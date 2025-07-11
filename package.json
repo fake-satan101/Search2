@@ -1,4 +1,5 @@
 {
+  "homepage": "https://fake-satan101.github.io/Search2",
   "name": "reactapp",
   "private": true,
   "version": "0.0.0",
@@ -8,9 +9,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://fake-satan.github.io/Search2/",
   "dependencies": {
     "crypto-browserify": "^3.12.1",
     "react": "^19.1.0",
