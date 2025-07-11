@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Search2/', // <-- replace with your repo name
+  base: process.env.VITE_BASE_PATH ||'/Search2', // <-- replace with your repo name
 });
