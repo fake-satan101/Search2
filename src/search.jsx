@@ -10,6 +10,17 @@ import mat from "./assets/imgs/mat.webp";
 import pul from "./assets/imgs/pul.jpg";
 import sha from "./assets/imgs/sha.jpg";
 import tit from "./assets/imgs/tit.webp";
+import gla from "./assets/imgs/gla.jpg";
+import par from "./assets/imgs/par.webp";
+import whi from "./assets/imgs/whi.jpg";
+import jok from "./assets/imgs/jok.jpg";
+import lion from "./assets/imgs/lion.jpg";
+import br from "./assets/imgs/br.jpg";
+import up from "./assets/imgs/up.jpg";
+import her from "./assets/imgs/her.jpg";
+import fight from "./assets/imgs/fight.jpg";
+import walle from "./assets/imgs/walle.jpg";
+
 const sampleData = [
   {
     id: 1,
@@ -88,17 +99,93 @@ const sampleData = [
     topic: "Tragedy",
     img: sha,
   },
+  {
+  id: 12,
+  title: "Gladiator: The Rise of a General",
+  genres: ["Action", "Drama", "Historical"],
+  topic: "Resilience",
+  img: gla,
+},
+{
+  id: 13,
+  title: "Parasite: A Class Divide",
+  genres: ["Thriller", "Drama", "Dark Comedy"],
+  topic: "Society",
+  img: par,
+},
+{
+  id: 14,
+  title: "Whiplash: The Cost of Greatness",
+  genres: ["Drama", "Musical", "Psychological"],
+  topic: "Ambition",
+  img: whi,
+},
+{
+  id: 15,
+  title: "Joker: The Clown Prince of Crime",
+  genres: ["Crime", "Drama", "Psychological"],
+  topic: "Madness",
+  img: jok,
+},
+{
+  id: 16,
+  title: "The Lion King: A Circle of Life",
+  genres: ["Animation", "Adventure", "Drama"],
+  topic: "Family",
+  img: lion,
+},
+{
+  id: 17,
+  title: "Blade Runner 2049: A Dystopian Tale",
+  genres: ["Sci-Fi", "Thriller", "Drama"],
+  topic: "Identity",
+  img: br,
+},
+{
+  id: 18,
+  title: "Up: An Adventure in the Skies",
+  genres: ["Animation", "Adventure", "Comedy"],
+  topic: "Friendship",
+  img: up,
+},
+{
+  id: 19,
+  title: "Her: Love in a Digital Age",
+  genres: ["Sci-Fi", "Drama", "Romance"],
+  topic: "Technology",
+  img: her,
+},
+{
+  id: 20,
+  title: "Fight Club: An Underground Revolution",
+  genres: ["Drama", "Thriller", "Psychological"],
+  topic: "Identity",
+  img: fight,
+},
+{
+  id: 21,
+  title: "WALL·E: A Robot's Journey",
+  genres: ["Animation", "Sci-Fi", "Adventure"],
+  topic: "Environment",
+  img: walle,
+},
+
 ];
 
 const genres = [
   "Sci-Fi",
-  "Crime",
   "Action",
   "Drama",
+  "Crime",
   "Romance",
   "Musical",
   "Dark Comedy",
   "Thriller",
+  "Historical",
+  "Psychological",
+  "Animation",
+  "Adventure",
+  "Comedy"
 ];
 
 const topics = [
@@ -111,6 +198,14 @@ const topics = [
   "Love Story",
   "Space Exploration",
   "Dark Comedy",
+  "Resilience",
+  "Society",
+  "Ambition",
+  "Madness",
+  "Family",
+  "Identity",
+  "Friendship",
+  "Environment"
 ];
 
 const Search = () => {
