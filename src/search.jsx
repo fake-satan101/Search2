@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import god from "./assets/imgs/god.jpg";
 import ave from "./assets/imgs/ave.webp";
 import fo from "./assets/imgs/for.jpg";
@@ -173,40 +173,47 @@ const sampleData = [
 ];
 
 const genres = [
-  "Sci-Fi",
   "Action",
-  "Drama",
-  "Crime",
-  "Romance",
-  "Musical",
-  "Dark Comedy",
-  "Thriller",
-  "Historical",
-  "Psychological",
-  "Animation",
   "Adventure",
-  "Comedy"
+  "Animation",
+  "Comedy",
+  "Crime",
+  "Dark Comedy",
+  "Drama",
+  "Historical",
+  "Musical",
+  "Psychological",
+  "Romance",
+  "Sci-Fi",
+  "Thriller"
 ];
 
 const topics = [
-  "Mind-Bending",
-  "Mafia",
-  "Superheroes",
-  "Life Lessons",
-  "Technology",
-  "Tragedy",
-  "Love Story",
-  "Space Exploration",
+  "Ambition",
   "Dark Comedy",
+  "Environment",
+  "Family",
+  "Friendship",
+  "Identity",
+  "Life Lessons",
+  "Love Story",
+  "Madness",
+  "Mafia",
+  "Mind-Bending",
   "Resilience",
   "Society",
-  "Ambition",
-  "Madness",
-  "Family",
-  "Identity",
-  "Friendship",
-  "Environment"
+  "Space Exploration",
+  "Superheroes",
+  "Technology",
+  "Tragedy"
 ];
+
+
+
+
+
+
+
 
 const Search = () => {
   const [query, setQuery] = useState("");
@@ -221,6 +228,19 @@ const Search = () => {
       setSelected([...selected, value]);
     }
   };
+  const [scrollY, setScrollY] = useState(0);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY || 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleSearch = () => {
     return sampleData.filter((item) => {
@@ -245,7 +265,7 @@ const Search = () => {
       <h1 align="center">Movie Search</h1>
       <input
         type="text"
-        placeholder="Search by title..."
+        placeholder="Search by the title..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         style={{
@@ -272,7 +292,7 @@ const Search = () => {
 
           }}
         >
-          Filter
+          Filters
         </button>
 
         {filterOpen && (
@@ -393,12 +413,25 @@ const Search = () => {
                   height: "300px",
                   backgroundImage: `url(${item.img})`,
                   backgroundSize: "cover",
-                  backgroundPosition: "center",
+                  backgroundPosition: `center ${Math.min(50 + (scrollY * 0.05), 100)}%`,
                   borderRadius: "10px",
                   overflow: "hidden",
                   cursor: "pointer",
                   transition: "transform 0.3s ease",
                 }}
+                onClick={() => {
+                  const trimmedTitle =
+                    item.title.includes(":")
+                      ? item.title.split(":").slice(0, -1).join(":").trim()
+                      : item.title;
+
+                  window.open(
+                    `https://www.google.com/search?q=${encodeURIComponent(trimmedTitle)}`,
+                    "_blank"
+                  );
+                }}
+
+                
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.transform = "scale(1.05)")
                 }
